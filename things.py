@@ -54,7 +54,8 @@ def peopleOfTimeV2(time: float, people:int = 1) -> int:
 def calculateRoadSituation(initialCars:int, initialSituation:float, newCars:int) -> tuple((int, float)):
     maxCapacity = initialCars*(100/initialSituation)
     cars = initialCars+newCars
-    newSituation = initialSituation + cars/maxCapacity
+    # print(newCars, initialCars, maxCapacity, cars)
+    newSituation = (cars)/maxCapacity*100
     return cars, newSituation
 
 

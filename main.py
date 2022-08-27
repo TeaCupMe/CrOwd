@@ -155,7 +155,6 @@ pygame.draw.rect(sc, BLACK, (450, 900, 200, 50), 2)
 home_button = Button(450, 900, 200, 50)
 pygame.draw.rect(sc, BLACK, (850, 900, 200, 50), 2)
 sell_button = Button(850, 900, 200, 50)
-# pygame.display.update()
 slider = Slider(sc, 1080, 914, 400, 20, min=1, max=24, step=0.1)
 
 def updateNodesAndConnections(time):
@@ -330,6 +329,7 @@ while True:
         vidgets = []
         people = peopleOfTimeV2(slider.getValue(), click_flag_home_bool*67335)
         # people = 20000
+        # print(people)
         for i in range(7):
             cars, situation = getRoadData(i, people)
             vidgets.append(Plate(i, (0, 0), cars, situation))
